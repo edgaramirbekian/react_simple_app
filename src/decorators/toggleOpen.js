@@ -14,7 +14,7 @@ export default (OriginalComponent) => class WrappedComponent extends React.PureC
         return <OriginalComponent {...this.props} {...this.state} toggleOpen = {this.toggleOpen}/>
     }
 
-    toggleOpen = () => this.setState ({
+    toggleOpen = (ev) => this.setState ({
         isOpen: !this.state.isOpen
     })
 }
