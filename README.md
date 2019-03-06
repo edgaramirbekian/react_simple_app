@@ -1,1 +1,1 @@
-# react_simple_app
+# react.js_simple_app
