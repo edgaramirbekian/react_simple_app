@@ -1,38 +1,17 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-export default class Comment extends React.PureComponent {
-    constructor (props) {
-        super(props);
 
-        this.state = {
-            isOpen: true
-        }
-    }
-
-    render () {
-        const {comment} = this.props;
-        const {isOpen} = this.state;
-
+export default function Comment (props) {
+        const {comment} = props;
         return (
             <div>
                 <h6>{comment.user}</h6>
-                {this.toggleOpen()}
-                <button onClick = {this.handleClick}>
-                    {isOpen ? 'Close Com' : 'Open Com'}
-                </button>
+                <section>{comment.text}</section>
             </div>
         )
     }
 
-    toggleOpen = () => {
-        if (this.state.isOpen) {
-            const {comment} = this.props
-            return <section comment = {comment}> {comment.text} </section>
-        }
-        else return null
-    }
-
-    handleClick = () => this.setState ({
-        isOpen: !this.state.isOpen
-    })
+Comment.prop_types = {
+    comment: PropTypes.object
 }
