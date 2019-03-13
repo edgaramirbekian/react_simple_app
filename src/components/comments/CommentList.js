@@ -5,18 +5,27 @@ import toggleOpen from '../../decorators/toggleOpen';
 
 function CommentList ({comments, isOpen, toggleOpen}) {
     return (
-        <ul>
-            <button onClick = {toggleOpen}>
-                {isOpen ? 'Hide Comments' : 'Show Comments'}
-            </button>
-            {checkOpen(comments, isOpen)}
-        </ul>
+        <div>
+            <ul>
+                <button onClick = {toggleOpen}>
+                    {isOpen ? 'Hide Comments' : 'Show Comments'}
+                </button>
+                {checkOpen(comments, isOpen)}
+            </ul>
+        </div>
     )
 }
 
 const checkOpen = (some_data, state) => {
     if (state) {
-        return commentElement(some_data)
+        return (
+            <div>
+                {commentElement(some_data)}
+                <textarea placeholder = 'Add Comment'></textarea>
+                <br/>
+                <button onClick = {null}> Add Comment </button>
+            </div>
+        )
     }
     else return null
 }
