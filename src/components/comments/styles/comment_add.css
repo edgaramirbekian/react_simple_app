@@ -8,13 +8,23 @@ input[type=text], textarea {
   margin: 5px 1px 3px 0px;
   border: 1px solid #DDDDDD;
 }
- 
-.valid:focus, input[type=text]:focus, textarea:focus {
+
+input[type=text] {
+  height: 20px;
+  width: 150px;
+}
+
+textarea {
+  height: 200px;
+  width: 300px;
+}
+
+.valid:focus {
   box-shadow: 0 0 5px rgba(81, 203, 238, 1);
   border: 1px solid rgba(81, 203, 238, 1);
 }
    
-.invalid:focus, input[type=text]:focus, textarea:focus {
+.invalid:focus {
     box-shadow: 0 0 5px rgb(248, 2, 117);
     border: 1px solid rgb(248, 2, 117);
   }
