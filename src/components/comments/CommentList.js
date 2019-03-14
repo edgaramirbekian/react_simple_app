@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Comment from './Comment';
+import CommentAdd from './CommentAdd'
 import toggleOpen from '../../decorators/toggleOpen';
 
 function CommentList ({comments, isOpen, toggleOpen}) {
@@ -21,9 +22,7 @@ const checkOpen = (some_data, state) => {
         return (
             <div>
                 {commentElement(some_data)}
-                <textarea placeholder = 'Add Comment'></textarea>
-                <br/>
-                <button onClick = {null}> Add Comment </button>
+                <CommentAdd />
             </div>
         )
     }
