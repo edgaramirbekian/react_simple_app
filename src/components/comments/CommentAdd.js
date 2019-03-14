@@ -10,13 +10,14 @@ export default class CommentAdd extends React.PureComponent {
 
     limits = {
         name: {max: 15, min: 5},
-        text: {max:100, min: 5}
+        text: {max:100, min: 15}
     }
 
     render () {
         return (
             <form onSubmit = {null}>
                <input
+                    type = 'text'
                     placeholder = 'user'
                     value = {this.state['name']} 
                     onChange = {this.handleChange('name')} 
