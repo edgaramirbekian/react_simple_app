@@ -8,6 +8,7 @@
     "react-day-picker": "^7.3.0",
     "react-dom": "^16.8.2",
     "react-scripts": "2.1.5",
+    "react-select": "^2.4.2",
     "react-transition-group": "^2.6.0"
   },
   "scripts": {
