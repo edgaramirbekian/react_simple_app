@@ -16,7 +16,6 @@ export default class CalendarDesk extends React.PureComponent {
     render () {
         return (
             <div>
-                <h3>Date</h3>
                 <DayPicker 
                     onDayClick = {this.handleDayClick} 
                     selectedDays = {this.state.from} 
