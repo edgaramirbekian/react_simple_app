@@ -1,12 +1,11 @@
 import React from 'react';
 import Article from './Article';
 import accordion from '../../decorators/accordion';
-import {articles} from '../../data/mock';
 import PropTypes from 'prop-types';
 
 
 function ArticleList (props) {
-
+    const {articles} = props
     const articleElement = () => articles.map(article => 
         {
             return (
