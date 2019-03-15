@@ -24,6 +24,7 @@ export default class CalendarDesk extends React.PureComponent {
                 {this.state.from 
                     ? <p> You selected {this.state.from.toLocaleDateString()} </p>
                     : <p> Please select a Date </p> }
+                <p> Today is {this.state.to.toLocaleDateString()} </p>
             </div>
         )
     }
